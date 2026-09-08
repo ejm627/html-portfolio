@@ -14,8 +14,8 @@
         <h2>Introduction & Aspirations</h2>
         <p>My goal for my career is to be in the IT/Cybersecurity space. I currently have an IT adjacent role in theatre as a Stage Technician and Stage Hand. This invovles maintenance, setup, and operation of professional AVL equipment in theatrical and orchestral environments. I have various high school and college level IT and CS classes under my belt, and am on my second year of a Cybersecurity degree at NAU.</p>
         <video height="500" controls>
-            <source src="https://ejm627.z19.web.core.windows.net/homework2/files/introduction_video.mp4" type="video/mp4">
-            <source src="https://ejm627.z19.web.core.windows.net/homework2/files/introduction_video.mov" type="video/mov">
+            <source src="./files/introduction_video.mp4" type="video/mp4">
+            <source src="./files/introduction_video.mov" type="video/mov">
         </video>
         <hr />
 
@@ -44,28 +44,28 @@
 
         <h3>Home Server</h3>
         <p>I wiped a spare laptop of mine and flashed it with an Ubuntu Server ISO. I primarily use it to host a 24/7 Minecraft server for me and my friends. I use PufferPanel for a WebUI that my friends can access to start the server, and it also allows me to spin up concurrent servers in docker containers. I have allocated 5 open ports for servers with total isolation and zero hassle Java version management. The image below shows </p>
-        <img src="https://ejm627.z19.web.core.windows.net/homework2/files/projects/home-server/home-server-admin.png"
+        <img src="./files/projects/home-server/home-server-admin.png"
         alt="A screenshot of PufferPanel and a terminal running a resource monitor"
         height="250">
-        <img src="https://ejm627.z19.web.core.windows.net/homework2/files/projects/home-server/minecraft-screenshot.png"
+        <img src="./files/projects/home-server/minecraft-screenshot.png"
         alt="A house in Minecraft beta 1.7.3"
         height="250">
 
         <h3>Cloud VPS</h3>
         <p>When I set up the Minecraft server, I knew I couldn't port forward on either Starlink or campus Wi-Fi. I had tried a few tunnling services before, but was never happy with the bandwidth limiting. As a solution that doesn't require my friends installing anything, I set up another Ubuntu Server in Oracle's "Always Free" tier to act as a cloud proxy and forward traffic in ports 5657 (SFTP), 8080 (PufferPanel), and 25565-25569 (5 concurrent Minecraft servers).</p>
-        <img src="https://ejm627.z19.web.core.windows.net/homework2/files/projects/cloud-vps/generic-oracle-cloud.png"
+        <img src="./files/projects/cloud-vps/generic-oracle-cloud.png"
         alt="A generic Oracle Cloud picture"
         height="250">
-        <img src="https://ejm627.z19.web.core.windows.net/homework2/files/projects/cloud-vps/vps-firewall.png"
+        <img src="./files/projects/cloud-vps/vps-firewall.png"
         alt="A screenshot of the ufw firewall on the Cloud VPS"
         height="250">
 
         <h3>IP Hunting</h3>
         <p>A friend of mine is using a paid server hosting provider to run a Minecraft server, and gave me the IP to join it. I realized, however, that the provider was likely hosting multiple servers off of one IP, relying on ports to distinguish the worlds. So, I pinged a range of ports and I found ~15 different servers. Compounding that idea, I used "<u>whois</u>" to identify the range of IPs used to host the servers. With this information, I was able to find 3,500 servers and use mcstatus to catalogue their versions and player counts. I'm not planning on doing anything with the IPs, but I do want to create a UI to easily update and sort through the information.</p>
-        <img src="https://ejm627.z19.web.core.windows.net/homework2/files/projects/ip-hunting/minecraft-ip-list.png" 
+        <img src="./files/projects/ip-hunting/minecraft-ip-list.png" 
         alt="A list of 40+ Minecraft IPs, partially blurred, attached to server Message of the Days. "
         height="250">
-        <img src="https://ejm627.z19.web.core.windows.net/homework2/files/projects/ip-hunting/code_overview.png"
+        <img src="./files/projects/ip-hunting/code_overview.png"
         alt="A screenshot of the files used to run the IP finding automation"
         height="250">
         
@@ -156,7 +156,7 @@
             LinkedIn: <a href="https://www.linkedin.com/in/nicole-mcauley1/">Nicole McAuley</a><br>
             Email: <a href="mailto:nicolejmcauley@gmail.com">nicolejmcauley@gmail.com</a><br>
             Phone number: <a href="callto:6239867733">(623) 986-7733</a><br>
-            Resume: <a href="https://ejm627.z19.web.core.windows.net/homework2/Nicole_McAuley-ITS_Resume.pdf" download="Nicole-McAuley-Resume.pdf">Nicole-McAuley-Resume.pdf</a>
+            Resume: <a href="./Nicole_McAuley-ITS_Resume.pdf" download="Nicole-McAuley-Resume.pdf">Nicole-McAuley-Resume.pdf</a>
         </p>
         
     </body>
