@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>
+            Nicole's Portfolio
+        </title>
+    </head>
+    <body>
+
+        <h1>Nicole McAuley</h1>
+
+
+        <h2>Introduction & Aspirations</h2>
+        <p>My goal for my career is to be in the IT/Cybersecurity space. I currently have an IT adjacent role in theatre as a Stage Technician and Stage Hand. This invovles maintenance, setup, and operation of professional AVL equipment in theatrical and orchestral environments. I have various high school and college level IT and CS classes under my belt, and am on my second year of a Cybersecurity degree at NAU.</p>
+        <video height="500" controls>
+            <source src="https://ejm627.z19.web.core.windows.net/homework2/files/introduction_video.mp4" type="video/mp4">
+            <source src="https://ejm627.z19.web.core.windows.net/homework2/files/introduction_video.mov" type="video/mov">
+        </video>
+        <hr />
+
+
+        <h2>Skills</h2>
+        <h3>Soft Skills</h3>
+        <ul>
+            <li>Leadership</li>
+            <li>Quick problem solving</li>
+            <li>Verbal communication</li>
+            <li>Collaboration</li>
+            <li>Customer Service</li>
+        </ul>
+
+        <h3>Hard Skills</h3>
+        <ul>
+            <li>Foundations in C++, C, Java, Python, HTML, CSS, and JavaScript</li>
+            <li>Experience troubleshooting across Windows, MacOS, and Linux</li>
+            <li>Proficient in Microsoft Office and Google Workspace</li>
+            <li>Basic Life Support (First aid, CPR, Oxygen)</li>
+        </ul>
+
+
+        <h2>Projects</h2>
+        <p>This is a list of the most relevant projects I've committed to, whether it be a class project or a side hobby.</p>
+
+        <h3>Home Server</h3>
+        <p>I wiped a spare laptop of mine and flashed it with an Ubuntu Server ISO. I primarily use it to host a 24/7 Minecraft server for me and my friends. I use PufferPanel for a WebUI that my friends can access to start the server, and it also allows me to spin up concurrent servers in docker containers. I have allocated 5 open ports for servers with total isolation and zero hassle Java version management. The image below shows </p>
+        <img src="https://ejm627.z19.web.core.windows.net/homework2/files/projects/home-server/home-server-admin.png"
+        alt="A screenshot of PufferPanel and a terminal running a resource monitor"
+        height="250">
+        <img src="https://ejm627.z19.web.core.windows.net/homework2/files/projects/home-server/minecraft-screenshot.png"
+        alt="A house in Minecraft beta 1.7.3"
+        height="250">
+
+        <h3>Cloud VPS</h3>
+        <p>When I set up the Minecraft server, I knew I couldn't port forward on either Starlink or campus Wi-Fi. I had tried a few tunnling services before, but was never happy with the bandwidth limiting. As a solution that doesn't require my friends installing anything, I set up another Ubuntu Server in Oracle's "Always Free" tier to act as a cloud proxy and forward traffic in ports 5657 (SFTP), 8080 (PufferPanel), and 25565-25569 (5 concurrent Minecraft servers).</p>
+        <img src="https://ejm627.z19.web.core.windows.net/homework2/files/projects/cloud-vps/generic-oracle-cloud.png"
+        alt="A generic Oracle Cloud picture"
+        height="250">
+        <img src="https://ejm627.z19.web.core.windows.net/homework2/files/projects/cloud-vps/vps-firewall.png"
+        alt="A screenshot of the ufw firewall on the Cloud VPS"
+        height="250">
+
+        <h3>IP Hunting</h3>
+        <p>A friend of mine is using a paid server hosting provider to run a Minecraft server, and gave me the IP to join it. I realized, however, that the provider was likely hosting multiple servers off of one IP, relying on ports to distinguish the worlds. So, I pinged a range of ports and I found ~15 different servers. Compounding that idea, I used "<u>whois</u>" to identify the range of IPs used to host the servers. With this information, I was able to find 3,500 servers and use mcstatus to catalogue their versions and player counts. I'm not planning on doing anything with the IPs, but I do want to create a UI to easily update and sort through the information.</p>
+        <img src="https://ejm627.z19.web.core.windows.net/homework2/files/projects/ip-hunting/minecraft-ip-list.png" 
+        alt="A list of 40+ Minecraft IPs, partially blurred, attached to server Message of the Days. "
+        height="250">
+        <img src="https://ejm627.z19.web.core.windows.net/homework2/files/projects/ip-hunting/code_overview.png"
+        alt="A screenshot of the files used to run the IP finding automation"
+        height="250">
+        
+        <h2>Education and Experience</h2>
+        <p>I am a second year student at NAU, majoring in Cybersecurity. I currently work under the <i>NAU College of Arts and Letters</i> in the theatre department. While not directly an IT role, it has a lot of overlap in maintaining, setting up, and operating AVL equipment. I have additional customer service experience at Dairy Queen.</p>
+        
+        <h3>Education</h3>
+
+        <table border="1">
+            <thead>
+                <th>School</th>
+                <th>Course</th>
+                <th>Title</th>
+                <th>Completion</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td rowspan="5">Northern Arizona University</td>
+                    <td>CS 212</td>
+                    <td>Web Programming</td>
+                    <td rowspan="4">In Progress</td>
+                </tr>
+                <tr>
+                    <td>CS 112</td>
+                    <td>Computer and Internet Literacy</td>
+                </tr>
+                <tr>
+                    <td>CS 105</td>
+                    <td>Computing Tools I</td>
+                </tr>
+                <tr>
+                    <td>CYB 136</td>
+                    <td>Secure Design II</td>
+                </tr>
+                <tr>
+                    <td>CYB 126</td>
+                    <td>Secure Design I</td>
+                    <td rowspan="4">Yes</td>
+                </tr>
+                <tr>
+                    <td rowspan="2">Astravo Online Academy</td>
+                    <td>X</td>
+                    <td>Intro into Java</td>
+                </tr>
+                <tr>
+                    <td>X</td>
+                    <td>Principles of Information Technology</td>
+                </tr>
+                <tr>
+                    <td rowspan="1">Shadow Ridge High School</td>
+                    <td>X</td>
+                    <td>Coding 1-2</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>Work Experience</h3>
+
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>Company</th>
+                    <th>Position</th>
+                    <th>Start Date</th>
+                    <th>End Date</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>NAU College of Arts and Letters</td>
+                    <td>Stage Technician</td>
+                    <td>October 2025</td>
+                    <td>Present</td>
+                </tr>
+                <tr>
+                    <td>Dairy Queen</td>
+                    <td>Crew Member</td>
+                    <td>May 2025</td>
+                    <td>August 2025</td>
+                </tr>
+            </tbody>
+        </table>
+
+
+        <hr />
+        <h2>Contact Information</h2>
+        <p>
+            LinkedIn: <a href="https://www.linkedin.com/in/nicole-mcauley1/">Nicole McAuley</a><br>
+            Email: <a href="mailto:nicolejmcauley@gmail.com">nicolejmcauley@gmail.com</a><br>
+            Phone number: <a href="callto:6239867733">(623) 986-7733</a><br>
+            Resume: <a href="https://ejm627.z19.web.core.windows.net/homework2/Nicole_McAuley-ITS_Resume.pdf" download="Nicole-McAuley-Resume.pdf">Nicole-McAuley-Resume.pdf</a>
+        </p>
+        
+    </body>
+</html>
