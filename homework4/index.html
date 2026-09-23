@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="keywords" content="HTML, CSS, Design Standards of HTML, Resume, Portfolio, Nicole McAuley"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Nicole's Portfolio</title>
+        <link rel="stylesheet" href="./style.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div class="grid-container">
+            <header class="header">
+                <h1>Portfolio: Nicole McAuley</h1>
+                <section id="introduction" class="container1">
+                    <article>
+                        <h2>Introduction and Aspirations</h2>
+                        <p>My name is Nicole McAuley, and I am a second-year Cybersecurity major at NAU. Since I grew up in Phoenix, I'm so glad to finally be somewhere where I can spend time outdoors. I love the hiking, computers, and cats.</p>
+                        <p>My goal for my career is to be in the IT/Cybersecurity space. I currently have an IT adjacent role in theatre as a Stage Technician and Stage Hand. This invovles maintenance, setup, and operation of professional AVL equipment in theatrical and orchestral environments. I have various high school and college level IT and CS classes under my belt, and am currently progressing through my third semester of college.</p>
+                    </article>
+                    <video class="intro-video" controls>
+                        <source src="./files/introduction_video.mp4" type="video/mp4">
+                        <source src="./files/introduction_video.mov" type="video/mov">
+                    </video>
+                </section>
+            </header>
+
+            <nav class="nav container1">
+                <header><h2>Navigation</h2></header>
+                <ul class="nav-flexbox">
+                    <li><a class="button" href="./index.html#introduction">Introduction and Aspirations</a></li>
+                    <li><a class="button" href="./index.html#skills">Skills</a></li>
+                    <li><a class="button" href="./index.html#projects">Projects</a></li>
+                    <li><a class="button" href="./index.html#education">Education and Experience</a></li>
+                    <li><a class="button" href="./index.html#contact">Contact Information</a></li>
+                    <br />
+                    Download Resume: <a href="./Nicole_McAuley-ITS_Resume.pdf" download="Nicole-McAuley-Resume.pdf" class="button">Nicole-McAuley-Resume.pdf</a>
+                </ul>
+            </nav>
+            
+            <main class="main">
+                <section id="skills" class="container1">
+                    <h2>Skills</h2>
+                    <div class="skills-flexbox">
+                        <article class="skill-transformation">
+                            <h3>Soft Skills</h3>
+                            <ul>
+                                <li>Leadership</li>
+                                <li>Quick problem solving</li>
+                                <li>Verbal communication</li>
+                                <li>Collaboration</li>
+                                <li>Customer Service</li>
+                            </ul>
+                        </article>
+
+                        <article class="skill-transformation">
+                            <h3>Hard Skills</h3>
+                            <ul>
+                                <li>Foundations in Python, Java C, C++, HTML, CSS, and JavaScript</li>
+                                <li>Experience troubleshooting across Windows, MacOS, and Linux</li>
+                                <li>Proficient in Microsoft Office and Google Workspace</li>
+
+                            </ul>
+                        </article>
+                    </div>
+                </section>
+
+
+                <section id="projects" class="container1">
+                    <h2>Projects</h2>
+                    <p>This is a list of the most relevant projects I've committed to, whether it be a class project or a side hobby.</p>
+
+                    <article class="container2">
+                        <h3>Home Server</h3>
+                        <div class="image-group">
+                            <img src="./files/projects/home-server/home-server-admin.png"
+                            alt="A screenshot of PufferPanel and a terminal running a resource monitor">
+                            <img src="./files/projects/home-server/minecraft-screenshot.png"
+                            alt="A house in Minecraft beta 1.7.3">
+                        </div>
+                        <p>I wiped a spare laptop of mine and flashed it with an Ubuntu Server ISO. I primarily use it to host a 24/7 Minecraft server for me and my friends. I use PufferPanel for a WebUI that my friends can access to start the server, and it also allows me to spin up concurrent servers in docker containers. I have allocated 5 open ports for servers with total isolation and zero hassle Java version management.</p>
+                    </article>
+
+                    <article class="container2">
+                        <h3>Cloud VPS</h3>
+                        <div class="image-group">
+                            <img src="./files/projects/cloud-vps/generic-oracle-cloud.png"
+                            alt="A generic Oracle Cloud picture">
+                            <img src="./files/projects/cloud-vps/vps-firewall.png"
+                            alt="A screenshot of the ufw firewall on the Cloud VPS">
+                        </div>
+                        <p>When I set up the Minecraft server, I knew I couldn't port forward on either Starlink or campus Wi-Fi. I had tried a few tunnling services before, but was never happy with the bandwidth limiting. As a solution that doesn't require my friends installing anything, I set up another Ubuntu Server in Oracle's "Always Free" tier to act as a cloud proxy and forward traffic in ports 5657 (SFTP), 8080 (PufferPanel), and 25565-25569 (5 concurrent Minecraft servers).</p>
+                    </article>
+
+                    <article class="container2">
+                        <h3>IP Hunting</h3>
+                        <div class="image-group">
+                            <img src="./files/projects/ip-hunting/minecraft-ip-list.png" 
+                            alt="A list of 40+ Minecraft IPs, partially blurred, attached to server Message of the Days. ">
+                            <img src="./files/projects/ip-hunting/code_overview.png"
+                            alt="A screenshot of the files used to run the IP finding automation">
+                        </div>
+                        <p>A friend of mine is using a paid server hosting provider to run a Minecraft server, and gave me the IP to join it. I realized, however, that the provider was likely hosting multiple servers off of one IP, relying on ports to distinguish the worlds. So, I pinged a range of ports and I found ~15 different servers. Compounding that idea, I used "<u>whois</u>" to identify the range of IPs used to host the servers. With this information, I was able to find 3,500 servers and use mcstatus to catalogue their versions and player counts. I'm not planning on doing anything with the IPs, but I do want to create a UI to easily update and sort through the information.</p>
+                    </article>
+                </section>
+
+
+                <section id="education" class="container1">
+                    <h2>Education and Experience</h2>
+                    <p>I am a second year student at NAU, majoring in Cybersecurity. I currently work under the <i>NAU College of Arts and Letters</i> in the theatre department. While not directly an IT role, it has a lot of overlap in maintaining, setting up, and operating AVL equipment. I have additional customer service experience at Dairy Queen.</p>
+                    
+                    <article class="container2 table-scroll">
+                        <h3>Education</h3>
+    
+                        <table border="1">
+                            <thead>
+                                <th>School</th>
+                                <th>Course</th>
+                                <th>Title</th>
+                                <th>Completion</th>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td rowspan="5">Northern Arizona University</td>
+                                    <td>CS 212</td>
+                                    <td>Web Programming</td>
+                                    <td rowspan="4">In Progress</td>
+                                </tr>
+                                <tr>
+                                    <td>CS 112</td>
+                                    <td>Computer and Internet Literacy</td>
+                                </tr>
+                                <tr>
+                                    <td>CS 105</td>
+                                    <td>Computing Tools I</td>
+                                </tr>
+                                <tr>
+                                    <td>CYB 136</td>
+                                    <td>Secure Design II</td>
+                                </tr>
+                                <tr>
+                                    <td>CYB 126</td>
+                                    <td>Secure Design I</td>
+                                    <td rowspan="4">Yes</td>
+                                </tr>
+                                <tr>
+                                    <td rowspan="2">Astravo Online Academy</td>
+                                    <td>X</td>
+                                    <td>Intro into Java</td>
+                                </tr>
+                                <tr>
+                                    <td>X</td>
+                                    <td>Principles of Information Technology</td>
+                                </tr>
+                                <tr>
+                                    <td rowspan="1">Shadow Ridge High School</td>
+                                    <td>X</td>
+                                    <td>Coding 1-2</td>
+                                </tr>
+                            </tbody>
+                        </table><br>
+                    </article>
+
+                    <article class="container2 table-scroll">
+                        <h3>Work Experience</h3>
+                        
+                        <table border="1">
+                            <thead>
+                                <tr>
+                                    <th>Company</th>
+                                    <th>Position</th>
+                                    <th>Start Date</th>
+                                    <th>End Date</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>NAU College of Arts and Letters</td>
+                                    <td>Stage Technician</td>
+                                    <td>October 2025</td>
+                                    <td>Present</td>
+                                </tr>
+                                <tr>
+                                    <td>Dairy Queen</td>
+                                    <td>Crew Member</td>
+                                    <td>May 2025</td>
+                                    <td>August 2025</td>
+                                </tr>
+                            </tbody>
+                        </table><br>
+                    </article>
+                </section>
+            </main>
+
+            <footer class="footer">
+                <section id="contact" class="container1">
+                    <h2>Contact Information</h2>
+                    <p>
+                        LinkedIn: <a class="button" href="https://www.linkedin.com/in/nicole-mcauley1/">linkedin.com/in/nicole-mcauley1/</a><br>
+                        Email: <a class="button" href="mailto:nicolejmcauley@gmail.com">nicolejmcauley@gmail.com</a><br>
+                        Phone number: <a class="button" href="callto:6239867733">(623) 986-7733</a><br>
+                    </p>
+                </section>
+            </footer>
+        </div>
+    </body>
+</html>
